@@ -1,0 +1,312 @@
+[
+  {
+    "riddle": "C'est pas faux !",
+    "answer": {
+      "media": {
+        "name": "Kaamelott",
+        "author": "Alexandre Astier",
+        "year": 2005,
+        "type": "SERIES"
+      },
+      "from": "Perceval",
+      "to": "Arthur"
+    }
+  },
+  {
+    "riddle": "- Qu'est-c'qui est petit et marron ?\n- Un marron.\n- Putain il est fort ce con !\n",
+    "answer": {
+      "media": {
+        "name": "Kaamelott",
+        "author": "Alexandre Astier",
+        "year": 2005,
+        "type": "SERIES"
+      },
+      "from": "Merlin & Elias"
+    }
+  },
+  {
+    "riddle": "Elle est où la poulette ?",
+    "answer": {
+      "media": {
+        "name": "Kaamelott",
+        "author": "Alexandre Astier",
+        "year": 2005,
+        "type": "SERIES"
+      },
+      "from": "Kadoc",
+      "to": "Lancelot"
+    }
+  },
+  {
+    "riddle": "Sortez-vous les doigts du cul !",
+    "answer": {
+      "media": {
+        "name": "Kaamelott",
+        "author": "Alexandre Astier",
+        "year": 2005,
+        "type": "SERIES"
+      },
+      "from": "Arthur",
+      "to": "ses chevaliers"
+    }
+  },
+
+  {
+    "riddle": "Non Luke, je suis ton père.",
+    "answer": {
+      "media": {
+        "name": "Star Wars",
+        "author": "George Lucas",
+        "year": 1980,
+        "type": "MOVIE"
+      },
+      "from": "Dark Vador",
+      "to": "Luke Skywalker"
+    }
+  },
+  {
+    "riddle": "Hello there!",
+    "answer": {
+      "media": {
+        "name": "Star Wars",
+        "author": "George Lucas",
+        "year": 2005,
+        "type": "MOVIE"
+      },
+      "from": "Obi-Wan Kenobi",
+      "to": "General Grievous"
+    }
+  },
+  {
+    "riddle": "Si tu me tues, je deviendrais plus puissant que tu ne l'as jamais imaginé.",
+    "answer": {
+      "media": {
+        "name": "Star Wars",
+        "author": "George Lucas",
+        "year": 1977,
+        "type": "MOVIE"
+      },
+      "from": "Obi-Wan Kenobi",
+      "to": "Dark Vador"
+    }
+  },
+  {
+    "riddle": "Toujours par deux ils vont. Ni plus, ni moins. Le maître et son apprenti.",
+    "answer": {
+      "media": {
+        "name": "Star Wars",
+        "author": "George Lucas",
+        "year": 1999,
+        "type": "MOVIE"
+      },
+      "from": "Yoda",
+      "to": "Mace Windu"
+    }
+  },
+
+  {
+    "riddle": "L'hiver vient.",
+    "answer": {
+      "media": {
+        "name": "Game of Thrones",
+        "author": "David Benioff & D. B. Weiss",
+        "year": 2011,
+        "type": "SERIES"
+      },
+      "from": "Ned Stark"
+    }
+  },
+  {
+    "riddle": "Que dit-on au Dieu de la Mort ? Pas aujourd'hui.",
+    "answer": {
+      "media": {
+        "name": "Game of Thrones",
+        "author": "David Benioff & D. B. Weiss",
+        "year": 2011,
+        "type": "SERIES"
+      },
+      "from": "Syrio Forel",
+      "to": "Arya Stark"
+    }
+  },
+  {
+    "riddle": "Hodor.",
+    "answer": {
+      "media": {
+        "name": "Game of Thrones",
+        "author": "David Benioff & D. B. Weiss",
+        "year": 2011,
+        "type": "SERIES"
+      },
+      "from": "Hodor"
+    }
+  },
+  {
+    "riddle": "Le chaos n'est pas une fosse, le chaos est une échelle. Seule l'échelle est réelle. Seule l'ascension importe.\n",
+    "answer": {
+      "media": {
+        "name": "Game of Thrones",
+        "author": "David Benioff & D. B. Weiss",
+        "year": 2011,
+        "type": "SERIES"
+      },
+      "from": "Petyr Baelish",
+      "to": "Varys"
+    }
+  },
+
+  {
+    "riddle": "Avada Kedavra !",
+    "answer": {
+      "media": {
+        "name": "Harry Potter",
+        "author": "David Yates",
+        "year": 2007,
+        "type": "MOVIE"
+      },
+      "from": "Lord Voldemort"
+    }
+  },
+  {
+    "riddle": "J'espère que vous êtes contents de vous. On aurait pu se faire tuer, ou pire, être renvoyés.",
+    "answer": {
+      "media": {
+        "name": "Harry Potter",
+        "author": "Chris Columbus",
+        "year": 2001,
+        "type": "MOVIE"
+      },
+      "from": "Hermione Granger",
+      "to": "Ron Weasley et Harry Potter"
+    }
+  },
+  {
+    "riddle": "On peut trouver le bonheur même dans les moments les plus sombres, il suffit de se souvenir d'allumer la lumière.\n",
+    "answer": {
+      "media": {
+        "name": "Harry Potter",
+        "author": "Alfonso Cuarón",
+        "year": 2004,
+        "type": "MOVIE"
+      },
+      "from": "Albus Dumbledore"
+    }
+  },
+  {
+    "riddle": "Si tu veux savoir ce qu'est un homme, regarde comment il traite ses inférieurs, pas ses égaux.",
+    "answer": {
+      "media": {
+        "name": "Harry Potter",
+        "author": "David Yates",
+        "year": 2007,
+        "type": "MOVIE"
+      },
+      "from": "Sirius Black",
+      "to": "Harry Potter"
+    }
+  },
+
+  {
+    "riddle": "Mon précieux !",
+    "answer": {
+      "media": {
+        "name": "Le Seigneur des Anneaux",
+        "author": "Peter Jackson",
+        "year": 2001,
+        "type": "MOVIE"
+      },
+      "from": "Gollum",
+      "to": "l'Anneau"
+    }
+  },
+  {
+    "riddle": "Vous ne passerez pas !",
+    "answer": {
+      "media": {
+        "name": "Le Seigneur des Anneaux",
+        "author": "Peter Jackson",
+        "year": 2001,
+        "type": "MOVIE"
+      },
+      "from": "Gandalf",
+      "to": "Balrog"
+    }
+  },
+  {
+    "riddle": "- Messieurs, nous ne ferons pas d'arrêt avant la tombée de la nuit.\n- Et notre petit déjeuner ?\n- Vous l'avez déjà pris.\n- Oui, le premier c'est vrai, mais qu'en est-il du second petit déjeuner ?\n",
+    "answer": {
+      "media": {
+        "name": "Le Seigneur des Anneaux",
+        "author": "Peter Jackson",
+        "year": 2001,
+        "type": "MOVIE"
+      },
+      "from": "Aragorn et Pippin"
+    }
+  },
+  {
+    "riddle": "- Si par ma vie ou ma mort je peux vous protéger, je le ferai. Mon épée est vôtre.\n- Et mon arc est vôtre.\n- Et ma hache.\n",
+    "answer": {
+      "media": {
+        "name": "Le Seigneur des Anneaux",
+        "author": "Peter Jackson",
+        "year": 2001,
+        "type": "MOVIE"
+      },
+      "from": "Aragorn, Legolas et Gimli",
+      "to": "Frodo Sacquet"
+    }
+  },
+
+  {
+    "riddle": "Soit on meurt en héros, soit on vit assez longtemps pour se voir endosser le rôle du méchant.",
+    "answer": {
+      "media": {
+        "name": "The Dark Knight",
+        "author": "Christopher Nolan",
+        "year": 2008,
+        "type": "MOVIE"
+      },
+      "from": "Harvey Dent",
+      "to": "Batman"
+    }
+  },
+  {
+    "riddle": "Je suis fatigué patron, fatigué de devoir courir les routes et d'être seul comme un moineau sous la pluie...\nFatigué d'avoir jamais un ami pour parler, pour me dire où on va, d'où on vient et pourquoi...\nMais surtout je suis fatigué de voir les hommes se battre les uns contre les autres, je suis fatigué de toute\nla peine et la souffrance que je sens dans le monde...\n",
+    "answer": {
+      "media": {
+        "name": "La Ligne Verte",
+        "author": "Frank Darabont",
+        "year": 1999,
+        "type": "MOVIE"
+      },
+      "from": "John Coffey",
+      "to": "Paul Edgecomb"
+    }
+  },
+  {
+    "riddle": "Hier est derrière, demain est un mystère, mais aujourd'hui est un cadeau.\nC'est pour ça qu'on l'appelle le présent.\n",
+    "answer": {
+      "media": {
+        "name": "Kung Fu Panda",
+        "author": "Mark Osborne & John Stevenson",
+        "year": 2008,
+        "type": "MOVIE"
+      },
+      "from": "Maître Oogway",
+      "to": "Po"
+    }
+  },
+  {
+    "riddle": "Nom de Zeus !",
+    "answer": {
+      "media": {
+        "name": "Retour vers le Futur",
+        "author": "Robert Zemeckis",
+        "year": 1985,
+        "type": "MOVIE"
+      },
+      "from": "Dr Emmett Brown"
+    }
+  }
+]
