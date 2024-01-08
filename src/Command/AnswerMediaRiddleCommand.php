@@ -10,10 +10,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory;
+use TroisOlen\PhpunitTp\Service\QuoteAnswerChecker;
 
 final class AnswerMediaRiddleCommand extends Command
 {
     public function __construct(
+        private readonly QuoteAnswerChecker $quoteAnswerChecker,
         private readonly QuoteRiddleFactory $quoteRiddleFactory,
     ) {
         parent::__construct();
@@ -38,13 +40,15 @@ final class AnswerMediaRiddleCommand extends Command
         $io->text("« $generatedRiddle->riddle »");
         $io->ask(
             question: 'Your answer',
-            validator: static function (?string $answer) use ($generatedRiddle): string {
-                $answer = trim(mb_strtolower($answer ?? ''));
+            validator: function (?string $answer) use ($generatedRiddle): string {
+                $answer = $this->quoteAnswerChecker->getSanitizedPrompt($answer);
 
                 if ($answer === '/gg' || $answer === '') {
                     throw new RuntimeException('You gave up!');
                 }
-                if ($answer !== mb_strtolower($generatedRiddle->answer->media->name)) {
+                if (
+                    $this->quoteAnswerChecker->isValid(quoteAnswer: $generatedRiddle->answer, prompt: $answer) === false
+                ) {
                     throw new \Exception('Wrong answer!');
                 }
 
