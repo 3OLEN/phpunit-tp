@@ -9,9 +9,16 @@ use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory;
 
 final class AnswerMediaRiddleCommand extends Command
 {
+    public function __construct(
+        private readonly QuoteRiddleFactory $quoteRiddleFactory,
+    ) {
+        parent::__construct();
+    }
+
     protected function configure(): void
     {
         $this
@@ -26,16 +33,18 @@ final class AnswerMediaRiddleCommand extends Command
         $io->title('Hello there! Can you find the media name of this quote?');
         $io->note('Type « /gg » to give up.');
 
-        $io->text('« C\'est pas faux! »');
+        $generatedRiddle = $this->quoteRiddleFactory->generateRiddle();
+
+        $io->text("« $generatedRiddle->riddle »");
         $io->ask(
             question: 'Your answer',
-            validator: function (?string $answer): string {
+            validator: static function (?string $answer) use ($generatedRiddle): string {
                 $answer = trim(mb_strtolower($answer ?? ''));
 
                 if ($answer === '/gg' || $answer === '') {
                     throw new RuntimeException('You gave up!');
                 }
-                if ($answer !== 'kaamelott') {
+                if ($answer !== mb_strtolower($generatedRiddle->answer->media->name)) {
                     throw new \Exception('Wrong answer!');
                 }
 
@@ -44,6 +53,16 @@ final class AnswerMediaRiddleCommand extends Command
         );
 
         $io->success('Congratulations, you found the answer!');
+        $io->block(
+            messages: [
+                "« $generatedRiddle->riddle »",
+                "{$generatedRiddle->answer->from}"
+                    . ($generatedRiddle->answer->to !== null ? " to {$generatedRiddle->answer->to}" : '')
+                    . " -- {$generatedRiddle->answer->media->name} by {$generatedRiddle->answer->media->author}"
+                    . " ({$generatedRiddle->answer->media->year}).",
+            ],
+            style: 'fg=black;bg=cyan'
+        );
 
         return Command::SUCCESS;
     }
