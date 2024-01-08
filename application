@@ -6,6 +6,11 @@ declare(strict_types=1);
 require_once __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
+use TroisOlen\PhpunitTp\Command\AnswerMediaRiddleCommand;
 
-(new Application(name: 'PHPUnit TP', version: '1.0.0'))
-    ->run();
+$myConsoleApp = new Application(name: 'PHPUnit TP', version: '1.0.0');
+
+$myConsoleApp
+    ->add(new AnswerMediaRiddleCommand());
+
+$myConsoleApp->run();

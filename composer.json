@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "3olen\\PhpunitTp\\": "src/"
+      "TroisOlen\\PhpunitTp\\": "src/"
     }
   }
 }
