@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -eu
+
+readonly ROOT_PATH="$(realpath "$(dirname "$(realpath "${BASH_SOURCE[0]}")")/../..")"
+readonly BIN_DEV_PATH="${ROOT_PATH}/bin/dev"
+source "${BIN_DEV_PATH}"/inc.bash
+
+php_unit_args=""
+if [[ ! -z "${1:-}" ]]; then
+  php_unit_args="${1}"
+fi
+run_docker_phpunit "${php_unit_args}"

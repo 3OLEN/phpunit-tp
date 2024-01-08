@@ -11,3 +11,9 @@ Base de code pour le TP sur PHPUnit, promotion `Lumminus`
 ## 📄 Consignes
 
 ➡️ [Accéder au sujet]().
+
+## 🔨 Commandes
+
+- `bin/dev/application` : Exécution de l'application console.
+- `bin/dev/composer` : Exécution de `composer`.
+- `bin/dev/phpunit` : Exécution des tests unitaires.
