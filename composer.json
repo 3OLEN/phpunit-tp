@@ -1,0 +1,20 @@
+{
+  "name": "3olen/phpunit-tp",
+  "description": "Application console pour apprendre à utiliser PHPUnit.",
+  "minimum-stability": "stable",
+  "license": "project",
+  "authors": [
+    {
+      "name": "Billy Villena"
+    }
+  ],
+  "require": {
+    "php": "^8.3",
+    "symfony/console": "^6.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "3olen\\PhpunitTp\\": "src/"
+    }
+  }
+}

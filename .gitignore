@@ -1,0 +1,4 @@
+### Composer template
+/vendor/
+
+composer.lock
