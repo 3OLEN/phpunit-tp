@@ -36,7 +36,7 @@ run_docker_application() {
 }
 
 run_docker_phpunit() {
-  arg_command="phpunit"
+  arg_command="vendor/bin/phpunit"
   if [[ ! -z "${1:-}" ]]; then
     arg_command="${arg_command} $@"
   fi
