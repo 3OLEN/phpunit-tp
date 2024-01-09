@@ -16,7 +16,7 @@ error() {
 run_docker_composer() {
   arg_command="composer"
   if [[ ! -z "${1:-}" ]]; then
-    arg_command="${arg_command} ${1}"
+    arg_command="${arg_command} $@"
   fi
 
   title "Exécution de composer dans le container ${DOCKER_COMPOSER_CONTAINER_NAME}..."
@@ -27,7 +27,7 @@ run_docker_composer() {
 run_docker_application() {
   arg_command="php application"
   if [[ ! -z "${1:-}" ]]; then
-    arg_command="${arg_command} ${1}"
+    arg_command="${arg_command} $@"
   fi
 
   title "Exécution de l'application console dans le container ${DOCKER_APPLICATION_CONTAINER_NAME}..."
@@ -38,7 +38,7 @@ run_docker_application() {
 run_docker_phpunit() {
   arg_command="phpunit"
   if [[ ! -z "${1:-}" ]]; then
-    arg_command="${arg_command} ${1}"
+    arg_command="${arg_command} $@"
   fi
 
   title "Exécution de phpunit dans le container ${DOCKER_PHPUNIT_CONTAINER_NAME}..."
