@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace TroisOlen\PhpunitTp\Factory;
 
+use TroisOlen\PhpunitTp\DataProvider\QuoteDataProviderInterface;
 use TroisOlen\PhpunitTp\Model\QuoteDto;
-use TroisOlen\PhpunitTp\Service\QuoteSource\QuoteDataProviderInterface;
 
-final class QuoteRiddleFactory
+final class QuoteRiddleFactory extends AbstractStaticFactory
 {
-    public function getRandomRiddle(QuoteDataProviderInterface $source): QuoteDto
+    public static function getRandomRiddle(QuoteDataProviderInterface $source): QuoteDto
     {
         return $source->getRandom();
     }

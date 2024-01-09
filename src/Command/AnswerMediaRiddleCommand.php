@@ -17,7 +17,6 @@ final class AnswerMediaRiddleCommand extends Command
 {
     public function __construct(
         private readonly QuoteAnswerChecker $quoteAnswerChecker,
-        private readonly QuoteRiddleFactory $quoteRiddleFactory,
     ) {
         parent::__construct();
     }
@@ -36,7 +35,7 @@ final class AnswerMediaRiddleCommand extends Command
         $io->title('Hello there! Can you find the media name of this quote?');
         $io->note('Type « /gg » to give up.');
 
-        $generatedRiddle = $this->quoteRiddleFactory->getRandomRiddle(
+        $generatedRiddle = QuoteRiddleFactory::getRandomRiddle(
             source: new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/../../data/quotes.json'),
         );
 

@@ -8,8 +8,6 @@ require_once __DIR__.'/vendor/autoload.php';
 use Symfony\Component\Console\Application;
 
 // Used components
-// * Factory
-$quoteRiddleFactory = new TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory();
 // * Service
 $quoteAnswerChecker = new TroisOlen\PhpunitTp\Service\QuoteAnswerChecker();
 
@@ -20,7 +18,6 @@ $myConsoleApp
     ->add(
             new TroisOlen\PhpunitTp\Command\AnswerMediaRiddleCommand(
                 quoteAnswerChecker: $quoteAnswerChecker,
-                quoteRiddleFactory: $quoteRiddleFactory
             )
     );
 
