@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace TroisOlen\PhpunitTp\Service\QuoteSource;
+namespace TroisOlen\PhpunitTp\DataProvider;
 
 use TroisOlen\PhpunitTp\Enum\MediaTypeEnum;
 use TroisOlen\PhpunitTp\Model\AnswerDto;
 use TroisOlen\PhpunitTp\Model\MediaDto;
 use TroisOlen\PhpunitTp\Model\QuoteDto;
 
-final class JsonConverterQuoteSource implements QuoteSourceInterface
+final class JsonConverterQuoteDataProvider implements QuoteDataProviderInterface
 {
     private array $quotes = [];
 

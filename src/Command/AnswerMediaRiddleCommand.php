@@ -9,9 +9,9 @@ use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
+use TroisOlen\PhpunitTp\DataProvider\JsonConverterQuoteDataProvider;
 use TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory;
 use TroisOlen\PhpunitTp\Service\QuoteAnswerChecker;
-use TroisOlen\PhpunitTp\Service\QuoteSource\JsonConverterQuoteSource;
 
 final class AnswerMediaRiddleCommand extends Command
 {
@@ -37,7 +37,7 @@ final class AnswerMediaRiddleCommand extends Command
         $io->note('Type « /gg » to give up.');
 
         $generatedRiddle = $this->quoteRiddleFactory->getRandomRiddle(
-            source: new JsonConverterQuoteSource(filePath: __DIR__ . '/../../data/quotes.json'),
+            source: new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/../../data/quotes.json'),
         );
 
         $io->text("« $generatedRiddle->riddle »");
