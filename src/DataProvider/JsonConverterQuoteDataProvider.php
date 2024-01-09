@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace TroisOlen\PhpunitTp\DataProvider;
 
-use TroisOlen\PhpunitTp\Factory\MediaTypeEnumFactory;
-use TroisOlen\PhpunitTp\Model\AnswerDto;
-use TroisOlen\PhpunitTp\Model\MediaDto;
+use TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory;
 use TroisOlen\PhpunitTp\Model\QuoteDto;
 
 final class JsonConverterQuoteDataProvider implements QuoteDataProviderInterface
@@ -36,19 +34,7 @@ final class JsonConverterQuoteDataProvider implements QuoteDataProviderInterface
         }
 
         $this->quotes = array_map(
-            callback: fn (\stdClass $quote) => new QuoteDto(
-                riddle: $quote->riddle,
-                answer: new AnswerDto(
-                    media: new MediaDto(
-                        name: $quote->answer->media->name,
-                        author: $quote->answer->media->author,
-                        year: $quote->answer->media->year,
-                        type: MediaTypeEnumFactory::getFromConverter(mediaValue: $quote->answer->media->type),
-                    ),
-                    from: $quote->answer->from,
-                    to: $quote->answer->to ?? null,
-                ),
-            ),
+            callback: static fn (\stdClass $quote) => QuoteRiddleFactory::createFromStdClass($quote),
             array: json_decode(json: file_get_contents($this->filePath), flags: JSON_THROW_ON_ERROR),
         );
     }

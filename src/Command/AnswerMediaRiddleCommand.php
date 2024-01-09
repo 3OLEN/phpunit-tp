@@ -10,7 +10,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use TroisOlen\PhpunitTp\DataProvider\JsonConverterQuoteDataProvider;
-use TroisOlen\PhpunitTp\Factory\QuoteRiddleFactory;
 use TroisOlen\PhpunitTp\Service\QuoteAnswerChecker;
 
 final class AnswerMediaRiddleCommand extends Command
@@ -35,9 +34,8 @@ final class AnswerMediaRiddleCommand extends Command
         $io->title('Hello there! Can you find the media name of this quote?');
         $io->note('Type « /gg » to give up.');
 
-        $generatedRiddle = QuoteRiddleFactory::getRandomRiddle(
-            source: new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/../../data/quotes.json'),
-        );
+        $generatedRiddle = (new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/../../data/quotes.json'))
+            ->getRandom();
 
         $io->text("« $generatedRiddle->riddle »");
         $io->ask(
