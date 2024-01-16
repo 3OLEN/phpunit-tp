@@ -9,13 +9,14 @@ use Symfony\Component\Console\Exception\RuntimeException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use TroisOlen\PhpunitTp\DataProvider\JsonConverterQuoteDataProvider;
+use TroisOlen\PhpunitTp\DataProvider\QuoteDataProviderInterface;
 use TroisOlen\PhpunitTp\Service\QuoteAnswerChecker;
 
 final class AnswerMediaRiddleCommand extends Command
 {
     public function __construct(
         private readonly QuoteAnswerChecker $quoteAnswerChecker,
+        private readonly QuoteDataProviderInterface $quoteDataProvider,
     ) {
         parent::__construct();
     }
@@ -34,8 +35,7 @@ final class AnswerMediaRiddleCommand extends Command
         $io->title('Hello there! Can you find the media name of this quote?');
         $io->note('Type « /gg » to give up.');
 
-        $generatedRiddle = (new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/../../data/quotes.json'))
-            ->getRandom();
+        $generatedRiddle = $this->quoteDataProvider->getRandom();
 
         $io->text("« $generatedRiddle->riddle »");
         $io->ask(

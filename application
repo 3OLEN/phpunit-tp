@@ -6,6 +6,7 @@ declare(strict_types=1);
 require_once __DIR__.'/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
+use TroisOlen\PhpunitTp\DataProvider\JsonConverterQuoteDataProvider;
 
 // Used components
 // * Service
@@ -18,6 +19,7 @@ $myConsoleApp
     ->add(
             new TroisOlen\PhpunitTp\Command\AnswerMediaRiddleCommand(
                 quoteAnswerChecker: $quoteAnswerChecker,
+                quoteDataProvider: new JsonConverterQuoteDataProvider(filePath: __DIR__ . '/data/quotes.json')
             )
     );
 
